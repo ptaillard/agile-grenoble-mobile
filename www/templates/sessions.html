@@ -1,0 +1,21 @@
+<ion-view title="Sessions de {{starttime}}">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="session in sessions" class="item-icon-right item-text-wrap" ng-href="#/app/session/{{session.id}}">
+      	Salle: {{session.room}}<br>
+      	<span ng-class="{positive:(session.theme == 'desire'), balanced:(session.theme == 'sharing'), energized:(session.theme == 'pleasure'), assertive:(session.theme == 'change')}" >
+      		<span ng-if="session.theme == 'desire'">Desir & Réalité</span>
+      		<span ng-if="session.theme == 'sharing'">Partage & Emulation</span>
+      		<span ng-if="session.theme == 'pleasure'">Plaisir & Excellence</span>
+      		<span ng-if="session.theme == 'change'">Changement & Energie</span>
+      	</span><br/>
+      	<i class="icon ion-chevron-right"></i>
+      	<b>{{session.title}}</b><br>
+		<span ng-repeat="speaker in session.speakers | filter:'!@' track by $index "><span ng-if="!$first">, </span>{{speaker}}</span></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
