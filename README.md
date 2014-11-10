@@ -2,7 +2,9 @@ agile-grenoble-mobile
 =====================
 
 Application mobile pour la conférence Agile Grenoble 2014.
-Basé sur cordova + Ionic Framework
+Basé sur:
+- Cordova (http://cordova.apache.org/)
+- Ionic Framework (http://ionicframework.com/)
 
 Installation on Windows
 =======================
@@ -22,7 +24,7 @@ Launch cmd.exe and run android then install on version 19 (newer doesn't work wi
 5/ Install or update Node.js
 Add bin/ to your system environment variable PATH
 
-6/ Install Cordova
+6/ Install Cordova 
 $ npm install -g cordova
 
 7/ Install Cordova plugins
@@ -30,7 +32,7 @@ Add cordova plugin and ImageMagick to create icon app
 $ npm install cordova-icon -g
 Then install ImageMagick http://www.imagemagick.org/
 
-8/ Install Ionic
+8/ Install Ionic 
 $ npm install -g ionic
 
 Create Ionic project
