@@ -1,9 +1,6 @@
 var AgileGrenobleApp = AgileGrenobleApp || {};
 AgileGrenobleApp.controller('AproposCtrl' , function($scope) {
-
-		var loadData = function() {
-			
-	   };
-
-	   loadData();
+		$scope.open = function(url) {
+			window.open(url, '_system', 'location=yes');	
+		}
 	});

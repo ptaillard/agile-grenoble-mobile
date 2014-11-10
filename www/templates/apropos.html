@@ -3,6 +3,30 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <h1>About me</h1>
+    <ion-list class="card">
+	  <ion-item class="item-body">
+	  	<p>Application mobile pour la conférence Agile Grenoble 2014.</p>
+	  	<p>Pour plus d'information sur l'application: 
+	  		<a class="tab-item" ng-click="open('https://github.com/ptaillard/agile-grenoble-mobile')">
+	  			<i class="icon ion-social-github"></i>
+	  		</a>
+	  	</p>
+
+	  	<p>Pour plus d'information sur la conférence: </p>
+	  	<ion-list>
+	  		<ion-item class="item-avatar" ng-click="open('http://2014.agile-grenoble.org')">
+	  			<img src="img/logo/logo_blue.png"></img>
+		     	 <h2>Agile Grenoble</h2>
+		    </ion-item>
+		    <ion-item class="item-avatar" ng-click="open('http://www.clubagilerhonealpes.org/')">
+	  			<img src="img/logo/green_cara.png"></img>
+		     	 <h2>CARA</h2>
+		    </ion-item>
+		</ion-list>
+	  </ion-item>
+
+	  
+
+	</ion-list>
   </ion-content>
 </ion-view>

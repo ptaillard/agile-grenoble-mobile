@@ -17,7 +17,7 @@ AgileGrenobleApp.service('ProgrammeCacheService', function($q, ProgrammeService,
                     deferred.resolve(data);
                     AgCache.put('programme', data);
                 }, function(data) {
-                    alert( "Erreur lors de la creation du programme. Vérifiez votre connexion à internet." );
+                    deferred.reject(data);
                 });
             }
             

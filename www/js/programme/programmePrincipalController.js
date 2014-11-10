@@ -27,7 +27,7 @@ AgileGrenobleApp.controller('ProgrammePrincipalCtrl', function($scope, $http, Pr
                 ProgrammeCacheService.get().then(function(data) {
                     $scope.program = data;
                 }, function(data) {
-                    // error case
+                	
                 });
        };
 

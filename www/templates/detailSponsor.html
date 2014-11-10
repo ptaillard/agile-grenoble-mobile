@@ -8,8 +8,8 @@
           <img class="full-image" ng-src="img/sponsors/{{sponsor.photo}}">
         </ion-item>
         <ion-item class="item-body">
-          <button  ng-click="{{sponsor.web}}" class="button button-small button-outline button-positive">Site web</button>
-          <div  ng-include="description(sponsor)"></div>
+          <a class="button button-icon  button-large  icon ion-home" ng-click="open(sponsor.web)"></a>
+          <div  ng-include="description()"></div>
         </ion-item>
     </ion-list>
   </ion-content>

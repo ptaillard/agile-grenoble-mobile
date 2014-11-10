@@ -3,12 +3,16 @@ AgileGrenobleApp.controller('DetailSponsorCtrl' , function($scope, $stateParams,
 
 
 	var loadData = function() {
-		var sponsors = sponsorsService.get();
-		$scope.sponsor = sponsors[$stateParams.id];
-   };
+        var sponsors = sponsorsService.get();
+         $scope.sponsor = sponsors[$stateParams.id];
+   	};
 
-   loadData();
-	$scope.description = function(sponsor) {
-		return "img/sponsors/resources/" + sponsor.description;
+   	loadData();
+	$scope.description = function() {
+		return "img/sponsors/resources/" + $scope.sponsor.description;
+	}
+
+	$scope.open = function(url) {
+		window.open(url, '_system', 'location=yes');	
 	}
 });

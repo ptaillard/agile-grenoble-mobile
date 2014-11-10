@@ -1,7 +1,7 @@
 {
-  "name": "aggrenoble",
+  "name": "Agile Grenoble 2014",
   "version": "1.0.0",
-  "description": "agGrenoble: An Ionic project",
+  "description": "Agile Grenoble: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",

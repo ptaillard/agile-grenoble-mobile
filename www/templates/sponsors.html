@@ -8,15 +8,20 @@
     	<ion-item class="item-divider">
 	    	Sponsors Gold
 	  	</ion-item>
-      	<ion-item ng-repeat="sponsor in sponsors()" ng-if="sponsor.gold==true" href="#/app/sponsor/{{$index}}" class="item-body">
+      <ion-item ng-repeat="sponsor in sponsors()" ng-if="sponsor.gold==true" href="#/app/sponsor/{{$index}}" class="item-body">
       		<img class="full-image" ng-src="img/sponsors/{{sponsor.photo}}">
-        </ion-item>
-        <ion-item class="item-divider">
+      </ion-item>
+      <ion-item class="item-divider">
 	    	Sponsors Silver
 	  	</ion-item>
-	  	<ion-item ng-repeat="sponsor in sponsors()" ng-if="sponsor.gold==false" href="#/app/sponsor/{{$index}}" class="item-body">
+	  	<ion-item ng-repeat="sponsor in sponsors()" ng-if="sponsor.gold==false && sponsor.niveau == 'Sponsor Silver'" href="#/app/sponsor/{{$index}}" class="item-body">
             <img class="full-image" ng-src="img/sponsors/{{sponsor.photo}}">
-        </ion-item>
+      </ion-item>
+      <ion-item class="item-divider">
+        Partenaires
+      </ion-item>
+      <ion-item ng-repeat="sponsor in sponsors()" ng-if="sponsor.gold==false && sponsor.niveau != 'Sponsor Silver'" href="#/app/sponsor/{{$index}}" class="item-body">
+            <img class="full-image" ng-src="img/sponsors/{{sponsor.photo}}">
       </ion-item>
     </ion-list>
   </ion-content>
