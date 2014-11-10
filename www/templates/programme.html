@@ -4,22 +4,34 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <ion-list>
-      <ion-item ng-repeat="slot in program.slots" class="item-icon-right item-text-wrap" ng-href="{{getSessionsLink(slot, $index)}}">
-      <span class="item-note item-left">
-      {{getHourText($index)}}<br/>
+      <ion-item ng-repeat="slot in program.slots" class="item-icon-right item-text-wrap item-complex" ng-href="{{getSessionsLink(slot, $index)}}"
+      ng-class="{'item-stable': !isUniqueSlot(slot) || isKeynote(slot)}">
+      <span class="item-hour">
+      {{getHourText($index)}}
       </span>
           <span ng-if="isUniqueSlot(slot)">
-             <span ng-if="isKeynote(slot)">
-              <b>Keynote: <br/>
-                <span ng-repeat="speaker in getUniqueSlot(slot).speakers | filter:'!@' track by $index "><span ng-if="!$first">, </span>{{speaker}}</span>
+            <span ng-if="isKeynote(slot)">
+              <br/><b>Keynote:
+                <span ng-repeat="speaker in getUniqueSlot(slot).speakers | filter:'!@' track by $index "><span ng-if="!$first">, </span> {{speaker}}</span>
               </b>
               </span>
-             <span ng-if="!isKeynote(slot)"><i>{{getUniqueSlot(slot).title}}</i></span>
+            <span ng-if="isPauseCafe(slot)" class="item-small-normal">
+              <br/><i>{{getUniqueSlot(slot).title}}</i>
+            </span>
+            <span ng-if="isSponsors(slot)">
+              <br/><b>{{getUniqueSlot(slot).title}}</b>
+            </span>
+            <span ng-if="isNonSession(slot)" class="item-small-normal">
+              <br/><i>{{getUniqueSlot(slot).title}}</i>
+            </span>
+            <span ng-if="isRepas(slot)" class="item-small-normal">
+              <br/><b><i> {{getUniqueSlot(slot).title}}</i></b>
+            </span>
           </span>
-          <div ng-if="!isUniqueSlot(slot)" class="positive">
-            <i class="icon ion-chevron-right"></i>
+          <span ng-if="!isUniqueSlot(slot)"  class="positive">
+            <br/><i class="icon ion-chevron-right"></i>
             <b>Liste des sessions</b>
-          </div>
+          </span>
       </ion-item>
     </ion-list>
   </ion-content>

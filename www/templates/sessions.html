@@ -5,8 +5,8 @@
   <ion-content class="has-header">
     <ion-list>
       <ion-item ng-repeat="session in sessions" class="item-icon-right item-text-wrap" ng-href="#/app/session/{{session.id}}">
-      	Salle: {{session.room}}<br>
-      	<span ng-class="{positive:(session.theme == 'desire'), balanced:(session.theme == 'sharing'), energized:(session.theme == 'pleasure'), assertive:(session.theme == 'change')}" >
+      	<span class="item-hour"> Salle: {{session.room}}<br></span><br/>
+      	<span class="item-small" ng-class="{positive:(session.theme == 'desire'), balanced:(session.theme == 'sharing'), energized:(session.theme == 'pleasure'), assertive:(session.theme == 'change')}" >
       		<span ng-if="session.theme == 'desire'">Desir & Réalité</span>
       		<span ng-if="session.theme == 'sharing'">Partage & Emulation</span>
       		<span ng-if="session.theme == 'pleasure'">Plaisir & Excellence</span>

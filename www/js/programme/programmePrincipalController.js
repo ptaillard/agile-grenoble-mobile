@@ -36,6 +36,26 @@ AgileGrenobleApp.controller('ProgrammePrincipalCtrl', function($scope, $http, Pr
 	   		return (uniqueSlot == undefined)? false: uniqueSlot.width == 10;
 	    }
 
+	    $scope.isPauseCafe = function(slot) {
+	    	var uniqueSlot = slot['all'];
+	   		return $scope.isUniqueSlot(slot) && !$scope.isKeynote(slot) && uniqueSlot.type == 'cafe';
+	    }
+
+	    $scope.isSponsors = function(slot) {
+	    	var uniqueSlot = slot['all'];
+	   		return $scope.isUniqueSlot(slot) && !$scope.isKeynote(slot)  && uniqueSlot.type == 'sponsor' && uniqueSlot.width == 10;
+	    }
+
+	    $scope.isRepas = function(slot) {
+	    	var uniqueSlot = slot['all'];
+	   		return $scope.isUniqueSlot(slot) && !$scope.isKeynote(slot)  && uniqueSlot.type == 'meal' && uniqueSlot.width == 10;
+	    }
+
+	    $scope.isNonSession = function(slot) {
+	    	var uniqueSlot = slot['all'];
+	   		return $scope.isUniqueSlot(slot) && !$scope.isKeynote(slot)  && uniqueSlot.type == 'non-session';
+	    }
+
 		$scope.isUniqueSlot = function(slot) {
 			var isAllSlot = (slot['all'] != undefined);
 			var isKeynoteSlot = $scope.isKeynote(slot);
