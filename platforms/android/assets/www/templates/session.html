@@ -1,0 +1,35 @@
+<ion-view title="Session">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <div class="list card">
+
+	  <div class="item item-avatar">
+	    <h2>{{session.title}}</h2>
+	    <p>{{session.sub_title}}</p>
+	  </div>
+
+	  <div class="item item-body">
+	    <div><b>Salle:</b> {{session.room}}</div>
+		<div><b>Thème:</b> {{session.theme}}</div>
+	    <p>
+	      <div><b>Résumé : </b>{{session.abstract}} <p>{{session.description}}</p></div>
+		   <div><b>Bénéfices pour les participants : </b>{{session.benefits}}</div>
+	    </p>
+	    <p>
+	      <div ng-repeat="speaker in session['speaker-list']">
+	        <div><b>{{speaker.firstname}} {{speaker.lastname}}</b>:
+	            {{speaker.bio}}
+	        </div>
+	        <br>
+	   	 </div>
+	    </p>
+	  </div>
+	</div>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+ 

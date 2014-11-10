@@ -1,0 +1,28 @@
+<ion-view title="Sponsors">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+
+    <ion-list class="card">
+    	<ion-item class="item-divider">
+	    	Sponsors Gold
+	  	</ion-item>
+      <ion-item ng-repeat="sponsor in sponsors()" ng-if="sponsor.gold==true" href="#/app/sponsor/{{$index}}" class="item-body">
+      		<img class="full-image" ng-src="img/sponsors/{{sponsor.photo}}">
+      </ion-item>
+      <ion-item class="item-divider">
+	    	Sponsors Silver
+	  	</ion-item>
+	  	<ion-item ng-repeat="sponsor in sponsors()" ng-if="sponsor.gold==false && sponsor.niveau == 'Sponsor Silver'" href="#/app/sponsor/{{$index}}" class="item-body">
+            <img class="full-image" ng-src="img/sponsors/{{sponsor.photo}}">
+      </ion-item>
+      <ion-item class="item-divider">
+        Partenaires
+      </ion-item>
+      <ion-item ng-repeat="sponsor in sponsors()" ng-if="sponsor.gold==false && sponsor.niveau != 'Sponsor Silver'" href="#/app/sponsor/{{$index}}" class="item-body">
+            <img class="full-image" ng-src="img/sponsors/{{sponsor.photo}}">
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
