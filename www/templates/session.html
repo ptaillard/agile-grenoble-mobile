@@ -7,16 +7,21 @@
       <div class="list card">
 
 	  <div class="item item-avatar">
-	    <h2>{{session.title}}</h2>
+	    <h2><b>{{session.title}}</b></h2>
 	    <p>{{session.sub_title}}</p>
 	  </div>
 
 	  <div class="item item-body">
-	    <div><b>Salle:</b> {{session.room}}</div>
-		<div><b>Thème:</b> {{session.theme}}</div>
+	    <span class="item-hour"><b>Salle:</b> {{session.room}}</span><br/>
+		<span class="item-small" ng-class="{positive:(session.theme == 'desire'), balanced:(session.theme == 'sharing'), energized:(session.theme == 'pleasure'), assertive:(session.theme == 'change')}" >
+      		<span ng-if="session.theme == 'desire'">Desir & Réalité</span>
+      		<span ng-if="session.theme == 'sharing'">Partage & Emulation</span>
+      		<span ng-if="session.theme == 'pleasure'">Plaisir & Excellence</span>
+      		<span ng-if="session.theme == 'change'">Changement & Energie</span>
+      	</span><br/>
 	    <p>
-	      <div><b>Résumé : </b>{{session.abstract}} <p>{{session.description}}</p></div>
-		   <div><b>Bénéfices pour les participants : </b>{{session.benefits}}</div>
+	      <div><b>Résumé : </b>{{session.abstract}} <p>{{session.description}}</p></div><br/>
+		   <div ng-if="session.benefits!=''"><b>Bénéfices pour les participants : </b>{{session.benefits}}</div>
 	    </p>
 	    <p>
 	      <div ng-repeat="speaker in session['speaker-list']">
