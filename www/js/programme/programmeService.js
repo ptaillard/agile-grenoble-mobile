@@ -55,31 +55,14 @@ AgileGrenobleApp.service('ProgrammeService', function($q, Slots, LocalSlots) {
            
             Slots.jsonp_query().$promise.then(
                 function( datas ) {
-                    prepareSlots(datas);
-
-                    var datasDeferred = {};
-                    datasDeferred.slots = slots;
-                    datasDeferred.rooms = createRooms(datas.rooms);
-                    datasDeferred.slot_hours_length = slot_hours_length;
-                    datasDeferred.row_hours_position = row_hours_position;
-                    datasDeferred.slot_hours = slot_hours;
-                    datasDeferred.legend = legend;
-                    deferred.resolve(datasDeferred);
+                    
+                    deferred.resolve(getDeferredDatas(datas));
                 },
                 function( error ) {
                     alert( "Le programme peux ne pas être à jour car l'accès est impossible au serveur.\n" +
                             "Vérifiez votre connexion internet." );
                     LocalSlots.get(function(datas) {
-                        prepareSlots(datas);
-
-                        var datasDeferred = {};
-                        datasDeferred.slots = slots;
-                        datasDeferred.rooms = createRooms(datas.rooms);
-                        datasDeferred.slot_hours_length = slot_hours_length;
-                        datasDeferred.row_hours_position = row_hours_position;
-                        datasDeferred.slot_hours = slot_hours;
-                        datasDeferred.legend = legend;
-                        deferred.resolve(datasDeferred);
+                        deferred.resolve(getDeferredDatas(datas));
                     }, function(data) {
                         alert( "Le programme ne peux pas être affiché.\n" +
                             "Vérifiez votre connexion internet." );
@@ -108,6 +91,19 @@ AgileGrenobleApp.service('ProgrammeService', function($q, Slots, LocalSlots) {
             slots = {};
             rooms = {};
        }
+
+       var getDeferredDatas = function(datas) {
+            prepareSlots(datas);
+
+            var datasDeferred = {};
+            datasDeferred.slots = slots;
+            datasDeferred.rooms = createRooms(datas.rooms);
+            datasDeferred.slot_hours_length = slot_hours_length;
+            datasDeferred.row_hours_position = row_hours_position;
+            datasDeferred.slot_hours = slot_hours;
+            datasDeferred.legend = legend;
+            return datasDeferred;
+        }
 
        var prepareSlots = function(datas) {
             clearDatas(datas);

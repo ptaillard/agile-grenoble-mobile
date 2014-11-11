@@ -7,7 +7,8 @@ AgileGrenobleApp.controller('ProgrammeSessionCtrl' , function($scope, $statePara
                 	$scope.session = datas;
                 },
                 function( error ) {
-                    alert( "Erreur lors du chargement de la session" );
+                    alert( "Chargement de la session impossible.\n" +
+                            "Vérifiez votre connexion internet.");
                 }
             );
 	   };

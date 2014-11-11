@@ -33,7 +33,6 @@ Installation on Windows
 - Add cordova plugin and ImageMagick to create icon app
 	- $ npm install cordova-icon -g
 	- Then install ImageMagick http://www.imagemagick.org/
-
 8/ Install Ionic 
 - $ npm install -g ionic
 

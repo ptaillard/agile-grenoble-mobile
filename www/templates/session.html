@@ -11,11 +11,13 @@
 
 	  <ion-item class="item-body">
 	    <span class="item-hour"><b>Salle:</b> {{session.room}}</span><br/>
+	    <!--span class="item-hour"><b>Durée:</b> {{session.length*15}} mns</span><br/-->
 		<span class="item-small" ng-class="{positive:(session.theme == 'desire'), balanced:(session.theme == 'sharing'), energized:(session.theme == 'pleasure'), assertive:(session.theme == 'change')}" >
-      		<span ng-if="session.theme == 'desire'">Desir & Réalité</span>
-      		<span ng-if="session.theme == 'sharing'">Partage & Emulation</span>
-      		<span ng-if="session.theme == 'pleasure'">Plaisir & Excellence</span>
-      		<span ng-if="session.theme == 'change'">Changement & Energie</span>
+			<span class="item-hour"><b>Thème: </b></span>
+      		<span ng-if="session.theme == 'desire'"> Desir & Réalité</span>
+      		<span ng-if="session.theme == 'sharing'"> Partage & Emulation</span>
+      		<span ng-if="session.theme == 'pleasure'"> Plaisir & Excellence</span>
+      		<span ng-if="session.theme == 'change'"> Changement & Energie</span>
       	</span><br/>
 	    <p>
 	      <div><b>Résumé : </b>{{session.abstract}} <p>{{session.description}}</p></div><br/>
