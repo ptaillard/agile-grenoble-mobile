@@ -211,7 +211,7 @@ E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\
 E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\detailSponsor.html \
 E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\keynotes.html \
 E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\menu.html \
-E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\principal.html \
+E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\programme.html \
 E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\session.html \
 E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\sessions.html \
 E:\Pierre\wamp\www\agile-grenoble-mobile\platforms\android\assets\www\templates\slots.json \

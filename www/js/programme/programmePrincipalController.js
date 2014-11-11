@@ -36,24 +36,38 @@ AgileGrenobleApp.controller('ProgrammePrincipalCtrl', function($scope, $http, Pr
 	   		return (uniqueSlot == undefined)? false: uniqueSlot.width == 10;
 	    }
 
+	    $scope.getKeynote = function(slot) {
+	    	return slot['Auditorium'];
+	    }
+
 	    $scope.isPauseCafe = function(slot) {
 	    	var uniqueSlot = slot['all'];
-	   		return $scope.isUniqueSlot(slot) && !$scope.isKeynote(slot) && uniqueSlot.type == 'cafe';
+	   		return 	$scope.isUniqueSlot(slot) && 
+	   				!$scope.isKeynote(slot) && 
+	   				uniqueSlot.type == 'cafe';
 	    }
 
 	    $scope.isSponsors = function(slot) {
 	    	var uniqueSlot = slot['all'];
-	   		return $scope.isUniqueSlot(slot) && !$scope.isKeynote(slot)  && uniqueSlot.type == 'sponsor' && uniqueSlot.width == 10;
+	   		return 	$scope.isUniqueSlot(slot) && 
+			   		!$scope.isKeynote(slot)  && 
+			   		uniqueSlot.type == 'sponsor' && 
+			   		uniqueSlot.width == 10;
 	    }
 
 	    $scope.isRepas = function(slot) {
 	    	var uniqueSlot = slot['all'];
-	   		return $scope.isUniqueSlot(slot) && !$scope.isKeynote(slot)  && uniqueSlot.type == 'meal' && uniqueSlot.width == 10;
+	   		return 	$scope.isUniqueSlot(slot) && 
+	   				!$scope.isKeynote(slot)  && 
+	   				uniqueSlot.type == 'meal' && 
+	   				uniqueSlot.width == 10;
 	    }
 
 	    $scope.isNonSession = function(slot) {
 	    	var uniqueSlot = slot['all'];
-	   		return $scope.isUniqueSlot(slot) && !$scope.isKeynote(slot)  && uniqueSlot.type == 'non-session';
+	   		return 	$scope.isUniqueSlot(slot) && 
+	   				!$scope.isKeynote(slot)  && 
+	   				uniqueSlot.type == 'non-session';
 	    }
 
 		$scope.isUniqueSlot = function(slot) {
@@ -68,7 +82,15 @@ AgileGrenobleApp.controller('ProgrammePrincipalCtrl', function($scope, $http, Pr
 	    }
 
 	    $scope.getSessionsLink = function(slot, index) {
-	    	var link = ($scope.isUniqueSlot(slot))? "" : "#/app/sessions/" + index;
+	    	var link = "";
+	    	if($scope.isUniqueSlot(slot)) {
+	    		if($scope.isKeynote(slot)) {
+					var session = $scope.getKeynote(slot);
+					link = '#/app/session/' + session.id;
+	    		}
+	    	} else {
+	    		link = "#/app/sessions/" + index;
+	    	}
 	    	return link;
 	    }
 
