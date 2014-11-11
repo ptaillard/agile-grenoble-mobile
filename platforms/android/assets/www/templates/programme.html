@@ -11,7 +11,8 @@
       </span>
           <span ng-if="isUniqueSlot(slot)">
             <span ng-if="isKeynote(slot)">
-              <br/><b>Keynote:
+              <br/><i class="icon ion-chevron-right"></i>
+              <b>Keynote:
                 <span ng-repeat="speaker in getUniqueSlot(slot).speakers | filter:'!@' track by $index "><span ng-if="!$first">, </span> {{speaker}}</span>
               </b>
               </span>
@@ -25,7 +26,7 @@
               <br/><i>{{getUniqueSlot(slot).title}}</i>
             </span>
             <span ng-if="isRepas(slot)" class="item-small-normal">
-              <br/><b><i> {{getUniqueSlot(slot).title}}</i></b>
+              <br/><i> {{getUniqueSlot(slot).title}}</i>
             </span>
           </span>
           <span ng-if="!isUniqueSlot(slot)"  class="positive">
