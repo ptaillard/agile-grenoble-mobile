@@ -1,2 +1,2 @@
 #!/bin/bash
-cordova-icon
+#cordova-icon
