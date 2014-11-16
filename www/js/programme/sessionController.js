@@ -13,5 +13,9 @@ AgileGrenobleApp.controller('ProgrammeSessionCtrl' , function($scope, $statePara
             );
 	   };
 
+       $scope.open = function(url) {
+            window.open(url, '_system', 'location=yes');    
+        }
+
 	   loadData();
 	});

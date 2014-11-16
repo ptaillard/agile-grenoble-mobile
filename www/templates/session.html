@@ -24,10 +24,16 @@
 		   <div ng-if="session.benefits!=''"><b>Bénéfices pour les participants : </b>{{session.benefits}}</div>
 	    </p>
 	    <p>
-	      <div ng-repeat="speaker in session['speaker-list']">
-	        <div><b>{{speaker.firstname}} {{speaker.lastname}}</b>:
-	            {{speaker.bio}}
-	        </div>
+	      <div ng-repeat="speaker in session['speakers-detail']">
+	      	<ion-item class="item-avatar">
+		      <img ng-if="speaker.profile_image!=''" ng-src="{{speaker.profile_image}}">
+		      <h2>{{speaker.name}}</h2>
+		      <p>
+		      	<a ng-click="open('https://twitter.com/{{speaker.twitter_id}}')" ng-if="speaker.twitter_id!=''" class="button button-icon icon ion-social-twitter"></a>
+		      	<a ng-click="open('{{speaker.website}}')" ng-if="speaker.website!=''" class="button button-icon icon ion-ios7-home"></a>
+		      </p>
+		      <p>{{speaker.bio}}</p>
+		    </ion-item>
 	        <br>
 	   	 </div>
 	    </p>
