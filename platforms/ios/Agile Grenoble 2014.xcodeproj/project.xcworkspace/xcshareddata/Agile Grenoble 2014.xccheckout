@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AF9BB689-3CA7-491F-9FDD-D5E326F2CBE6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Agile Grenoble 2014</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8EC1964F3FEA61E2DD1A3CC8DFD69A55708D2A4F</key>
+		<string>https://github.com/ptaillard/agile-grenoble-mobile.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/Agile Grenoble 2014.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8EC1964F3FEA61E2DD1A3CC8DFD69A55708D2A4F</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ptaillard/agile-grenoble-mobile.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8EC1964F3FEA61E2DD1A3CC8DFD69A55708D2A4F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8EC1964F3FEA61E2DD1A3CC8DFD69A55708D2A4F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>agile-grenoble-mobile</string>
+		</dict>
+	</array>
+</dict>
+</plist>
