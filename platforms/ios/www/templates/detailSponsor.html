@@ -1,0 +1,16 @@
+<ion-view title="Sponsor ">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list class="card">
+        <ion-item class="item-body">
+          <img class="full-image" ng-src="img/sponsors/{{sponsor.photo}}">
+        </ion-item>
+        <ion-item class="item-body">
+          <a class="button button-icon  button-large  icon ion-home" ng-click="open(sponsor.web)"></a>
+          <div  ng-include="description()"></div>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

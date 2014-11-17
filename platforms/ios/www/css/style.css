@@ -1,0 +1,41 @@
+
+.keynote {
+	background-color: #E8E4ED;
+}
+
+.sharing {
+    background-color: #D0F56C;
+}
+
+.change {
+    background-color: #E3B6B6; 
+}
+
+.pleasure {
+    background-color: #F5C55D;
+}
+
+.desire {
+    background-color: #C2D7FF;
+}
+
+.item-hour {
+  float: left;
+  color: #aaa;
+  font-size: 14px; 
+}
+
+.item-small {
+  font-size: 14px; 
+}
+
+.item-small-normal {
+  padding-left: 25px;
+  font-size: 14px; 
+}
+
+.item-small-light {
+  color: #aaa;
+  padding-left: 15px;
+  font-size: 16px; 
+}
