@@ -25,13 +25,29 @@
   font-size: 14px; 
 }
 
+.item-comment {
+  color: #aaa;
+  font-size: 14px; 
+}
+
 .item-small {
   font-size: 14px; 
 }
 
 .item-small-normal {
   padding-left: 25px;
+  color: #aaa;
   font-size: 14px; 
+}
+
+.item-bold-normal {
+  padding-left: 25px;
+  font-weight: bold;
+}
+
+.item-bold-double {
+  padding-left: 65px;
+  font-weight: bold;
 }
 
 .item-small-light {

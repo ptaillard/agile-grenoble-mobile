@@ -1,5 +1,5 @@
 var AgileGrenobleApp = AgileGrenobleApp || {};
-AgileGrenobleApp.controller('ProgrammePrincipalCtrl', function($scope, $http, ProgrammeCacheService, KeynotesService) {
+AgileGrenobleApp.controller('ProgrammePrincipalCtrl', function($scope, $http, ProgrammeCacheService, KeynotesService, $ionicLoading) {
 
 		$scope.displaytheme = true;
 		$scope.gridsterOpts = {
@@ -22,13 +22,18 @@ AgileGrenobleApp.controller('ProgrammePrincipalCtrl', function($scope, $http, Pr
 
 		var loadData = function() {
 
-                $scope.keynotes = KeynotesService.get();
+			$ionicLoading.show({
+		      template: '<i class="icon ion-loading-c"></i>'
+		    });
 
-                ProgrammeCacheService.get().then(function(data) {
-                    $scope.program = data;
-                }, function(data) {
-                	
-                });
+            $scope.keynotes = KeynotesService.get();
+
+            ProgrammeCacheService.get().then(function(data) {
+                $scope.program = data;
+                $ionicLoading.hide();
+            }, function(data) {
+            	$ionicLoading.hide();
+            });
        };
 
 	    $scope.isKeynote = function(slot) {

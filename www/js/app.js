@@ -38,6 +38,36 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+
+    .state('app.acces', {
+      url: "/acces",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/acces.html",
+          controller: 'AccesCtrl'
+        }
+      }
+    })
+
+    .state('app.parcours', {
+      url: "/parcours",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/parcours.html"
+        }
+      }
+    })
+
+    .state('app.detailparcours', {
+      url: "/parcours/:type",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/detailParcours.html",
+          controller: 'DetailParcoursCtrl'
+        }
+      }
+    })
+
     
     .state('app.sponsors', {
       url: "/sponsors",

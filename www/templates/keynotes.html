@@ -4,7 +4,7 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <ion-list class="card">
-      <ion-item ng-repeat="keynote in keynotes()">
+      <span ng-repeat="keynote in keynotes()">
          <ion-item class="item-avatar">
             <img ng-src="{{keynote.photo}}">
             <h2>{{keynote.name}}</h2>
@@ -21,7 +21,7 @@
               {{keynote.text3}}
             </p>
           </ion-item>
-      </ion-item>
+      </span>
     </ion-list>
   </ion-content>
 </ion-view>

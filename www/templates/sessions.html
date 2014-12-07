@@ -11,7 +11,7 @@
   <ion-content class="has-header has-subheader">
     <ion-list>
       <ion-item ng-repeat="session in sessions" class="item-icon-right item-text-wrap" ng-href="#/app/session/{{session.id}}">
-      	<span class="item-hour"> <b>Salle:</b> {{session.room}} </span><br/>
+      	<span class="item-comment"> <b>Salle:</b> {{session.room}} / {{dureeSession(session)}} </span><br/>
       	<span class="item-small" ng-class="{positive:(session.theme == 'desire'), balanced:(session.theme == 'sharing'), energized:(session.theme == 'pleasure'), assertive:(session.theme == 'change')}" >
       		<span ng-if="session.theme == 'desire'">Desir & Réalité</span>
       		<span ng-if="session.theme == 'sharing'">Partage & Emulation</span>
@@ -20,7 +20,7 @@
       	</span><br/>
       	<i class="icon ion-chevron-right"></i>
       	<b>{{session.title}}</b><br>
-		<span ng-repeat="speaker in session.speakers | filter:'!@' track by $index "><span ng-if="!$first">, </span>{{speaker}}</span></i>
+		    <span ng-repeat="speaker in session.speakers | filter:'!@' track by $index "><span ng-if="!$first">, </span>{{speaker}}</span></i>
       </ion-item>
     </ion-list>
   </ion-content>

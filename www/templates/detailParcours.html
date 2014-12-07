@@ -1,0 +1,312 @@
+<ion-view title="Notre menu">
+	<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+	<ion-list class="item-text-wrap">
+	    <ion-item class="item-avatar">
+	      	<img src="img/menu.png" />
+	      	<span ng-if="typeParcours=='apero'">
+	    		<h2>Menu <b>« APERO DINATOIRE »</b></h2>
+	    		<p>Vous êtes Manager, Chef de projet, Leader, curieux et vous voulez vous mettre en appétit, lancer une nouvelle équipe sur un projet agile </p>
+	    	</span>
+	    	<span ng-if="typeParcours=='chasse'">
+	    		<h2>Menu <b>« RETOUR DE CHASSE »</b></h2>
+	    		<p>Vous êtes équipier,  fan de sessions techniques bien faisandées, vous avez l’esprit craftsman, vous voulez BIEN FAIRE le PRODUIT, innover techniquement, exceller… c’est par ici : </p>
+	    	</span>
+	    	<span ng-if="typeParcours=='saveur'">
+	    		<h2>Menu <b>« SAVEUR »</b></h2>
+	    		<p>Pour vous, un bon produit est savoureux, bien pensé, bien cuisiné... Il n’y en a ni trop ni trop peu... Il y a un subtil mélange... Ce qui compte avant la technique de cuisson, c’est de faire les bons choix : vous êtes PO ou équipier très centré sur la définition du BON PRODUIT, voulez améliorer votre VISION produit / service, priorités, portefeuille, roadmap, specs…</p>
+	    	</span>
+	    	<span ng-if="typeParcours=='harry'">
+	    		<h2>Menu <b>« HARRY POTTER »</b></h2>
+	    		<p>Vous voulez entretenir la curiosité de l’équipe, exciter ses papilles et ses yeux, surprendre, mettre en éveil...  Mais c’est un exercice délicat... Ce menu vous ravira si vous êtes SCRUMMASTER, COACH ou EQUIPIER très intéressé par la facilitation au sein de l’équipe, si vous chercher à trouver la juste place du facilitateur agile, à la rendre plus auto-organisée, si vous voulez innover en rétro...</p>
+	    	</span>
+	    	<span ng-if="typeParcours=='exotic'">
+	    		<h2>Menu <b>« EXOTIQUE »</b></h2>
+	    		<p>Vous maîtrisez la cuisine de maman, les bonnes vieilles recettes (SCRUM, XP, KANBAN... ) mais vous êtes insatiable, curieux et voulez sortir des sentiers battus, de l’exotisme, des épices... découvrir de nouveaux « outils », de nouvelles voies moins explorées pour aller encore plus loin avec votre équipe, libérer les énergies…</p>
+	    	</span>
+	    	<span ng-if="typeParcours=='gargantua'">
+	    		<h2>Menu <b>« GARGANTUA »</b></h2>
+	    		<p>Votre appétit agile est insatiable... vous en voulez toujours plus... Vous avez de multiples équipes agiles mais vous visez maintenant le nirvana de l’agilité, son déploiement à l’échelle de l’entreprise jusqu’au top management... Vous voulez passer à l’entreprise agile et libérée, vivre de manière agile en dehors du travail.…</p>
+	    	</span>
+	    </ion-item>
+
+	    <span ng-if="typeParcours=='apero'">
+
+	    	<ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/254">
+		      	<span class="item-hour"> 10h </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>L'agilité pour les nuls</b><br>
+				<i><span>Emmanuel Etasse, Elise Vanholsbeeck </span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/240">
+		      	<span class="item-hour"> 10h </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Bien démarrer votre projet Agile</b><br>
+				<i><span>Alex Boutin</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/272">
+		      	<span class="item-hour"> 11h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>La contractualisation agile, à la Poste, c'est possible !</b><br>
+				<i><span>Michel Lejeune, Pierre Prygoda</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/278">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Transition agile 4 real @Meetic</b><br>
+				<i><span>Thomas Diavet, Nicolas Kalmanovitz </span></i>
+		    </ion-item>
+
+    	</span>
+
+    	<span ng-if="typeParcours=='chasse'">
+
+    		<ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/241">
+		      	<span class="item-hour"> 10h00 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Le cloud pour vos projets agiles</b><br>
+				<i><span>Guillaume Berche, Alain Delafosse</span></i>
+		    </ion-item>
+    		<ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/242">
+		      	<span class="item-hour"> 10h00 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Et si on spécifiait différemment ?</b><br>
+				<i><span>Bastien David</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/268">
+		      	<span class="item-hour"> 11h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>J'ai 2 amours : le Software Craftsmanship & les Musiques Electroniques</b><br>
+				<i><span>Guillaume Saint-Etienne</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/281">
+		      	<span class="item-hour"> 11h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Docker, les développeurs prennent le pouvoir</b><br>
+				<i><span>Manuel Vacelet</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/253">
+		      	<span class="item-hour"> 11h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Des options dans votre architecture</b><br>
+				<i><span>Jean-Baptiste Dusseaut</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/277">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Refactorer legacy, même pas peur !</b><br>
+				<i><span>Johan Martinsson, Rémy Sanlaville</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/278">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Transition agile 4 real @Meetic</b><br>
+				<i><span>Thomas Diavet, Nicolas Kalmanovitz</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/265">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Qui a dit que les pingouins ne savaient pas voler ?</b><br>
+				<i><span>Laurent Laffont, Claire Hernandez</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/258">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Ivre, j'ai développé une api de tests automatisés en Bash</b><br>
+				<i><span>Michael Borde</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/256">
+		      	<span class="item-hour"> 17h15 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Doublures en folie</b><br>
+				<i><span>Olivier Azeau</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/237">
+		      	<span class="item-hour"> 17h15 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>TDD en C++ - Yes, YOU can !</b><br>
+				<i><span>Haikel Guemar</span></i>
+		    </ion-item>
+    		
+    	</span>
+
+    	<span ng-if="typeParcours=='saveur'">
+
+    		<ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/248">
+		      	<span class="item-hour"> 10h00 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Lean Takeoff : plongez dans un monde incertain</b><br>
+				<i><span>Alfred Almendra, Christophe Ney</span></i>
+		    </ion-item>
+			<ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/242">
+		      	<span class="item-hour"> 10h00 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Et si on spécifiait différemment ?</b><br>
+				<i><span>Bastien David</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/267">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Atelier eXtreme Story Map</b><br>
+				<i><span>Jean-Pierre Bonnafous, Gregory Alexandre</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/283">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>The Big Payoff</b><br>
+				<i><span>Alexandre Boutin</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/290">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Le Lean Startup au service du Product Owner</b><br>
+				<i><span>Jérôme Guenver</span></i>
+		    </ion-item>
+
+    	</span>
+
+    	<span ng-if="typeParcours=='harry'">
+
+    		<ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/243">
+		      	<span class="item-hour"> 10h00 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>ScrumMaster, qui es-tu ? Que fais-tu ?</b><br>
+				<i><span>Laurence Hanot</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/247">
+		      	<span class="item-hour"> 10h00 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Libérez vos idées, partez à la découverte de la facilitation graphique</b><br>
+				<i><span>Romain Couturier</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/260">
+		      	<span class="item-hour"> 11h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>On dit qu'en agile l'équipe est auto-organisée. Est-ce si simple ?</b><br>
+				<i><span>Jean Dupuis, Pierrick Boyer</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/252">
+		      	<span class="item-hour"> 11h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Le T-Shirt du Leader agile</b><br>
+				<i><span>Vincent Daviet, Laurent Sarrazin</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/289">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Comment donner un souffle d'énergie positive à vos rétrospectives grâce à l'apreciative inquiry</b><br>
+				<i><span>Thierry Conter</span></i>
+		    </ion-item>
+
+    	</span>
+
+    	<span ng-if="typeParcours=='exotic'">
+			<ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/266">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Les questions efficaces au service de l'équipe agile</b><br>
+				<i><span>Marc Nazarian, Cyril Mégard</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/282">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Du rasoir d'Ockham au chaos fertile</b><br>
+				<i><span>Renaud Pagnon</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/263">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Quand la systémique inspire l'agilité</b><br>
+				<i><span>Rémy Genin</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/257">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Apporter plaisir, excellence et changement dans vos projets grâce à l'EFT</b><br>
+				<i><span>Fanny Walter</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/287">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Tais-toi ou t’es-toi ?</b><br>
+				<i><span>Emmanuel Etasse, Elise Landreau</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/255">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Apprendre à danser avec les polarités</b><br>
+				<i><span>François Beauregard</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/275">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Regarde comment tu bouges pour comprendre comment tu fonctionnes et développer tes points forts!</b><br>
+				<i><span>Frederic Dufau-Joël, Philippe Houssin</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/279">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Redevenir ingénieux avec l’innovation Jugaad </b><br>
+				<i><span>Fanny Walter, Jean-François Jagodzinski</span></i>
+		    </ion-item>
+
+    	</span>
+
+    	<span ng-if="typeParcours=='gargantua'">
+
+    		<ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/244">
+		      	<span class="item-hour"> 10h00 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Savoir improviser pour devenir plus agile </b><br>
+				<i><span>Vincent Daviet</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/245">
+		      	<span class="item-hour"> 10h00 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>4 étapes vers l’agilité organisationnelle</b><br>
+				<i><span>Fabien Puig</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/276">
+		      	<span class="item-hour"> 11h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Pour allez loin sur le retour d'expérience CHRONO Flex</b><br>
+				<i><span>Alexandre Gerard</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/262">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Agilité des organisations et intelligence collective</b><br>
+				<i><span>Céline Desmons</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/273">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Agilité : la fin du middle management?</b><br>
+				<i><span>Kevin Maccioni, Fabien Barbaud</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/274">
+		      	<span class="item-hour"> 14h45 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>MANAGEMENT 3.0 : What's Next ?? </b><br>
+				<i><span>Laurent Sarazin, Guy Derbier/span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/283">
+		      	<span class="item-hour"> 16h05 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>The Big Payoff</b><br>
+				<i><span>Alexandre Boutin</span></i>
+		    </ion-item>
+		    <ion-item class="item-icon-right item-text-wrap" ng-href="#/app/session/261">
+		      	<span class="item-hour"> 17h15 </span><br/>
+		      	<i class="icon ion-chevron-right"></i>
+		      	<b>Agile Way of Life</b><br>
+				<i><span>Aurélien Morvant, Simon Jaillais</span></i>
+		    </ion-item>
+
+    	</span>
+
+	</ion-list>
+  </ion-content>
+</ion-view>
